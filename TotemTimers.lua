@@ -296,6 +296,7 @@ function TotemTimers_UseAction(id, number, target)
 		if( ttdata ) then
 			TT["totem"] = string.gfind(ttdata, TT_TOTEM_REGEX)();
 			tt_trinket = string.gfind(ttdata, TT_TRINKET_REGEX)();
+			tt_isrecall = string.gfind(ttdata, TT_RECALL)();
 		end
 		if( TT["totem"] ) then
 			TTState = 1;
@@ -325,6 +326,13 @@ function TotemTimers_UseAction(id, number, target)
 			TT["element"] = TT_WATER;
 			TT["rank"] = 0;
 			TotemTimers_CreateTotem();	
+		elseif (tt_isrecall == TT_RECALL) then
+			--DEFAULT_CHAT_FRAME:AddMessage("Detected Totemic Recall");
+			data.duration = 0;
+			for num, totem in TTActiveTotems do
+				totem.active = nil;
+			end
+			TotemTimers_UpdateButtons();
 		else
 			local inRange = IsActionInRange(id);
 			if( inRange ) then
