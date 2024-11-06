@@ -1,6 +1,6 @@
 # TotemTimers Enhanced
 
-<b>Updated for TurtleWoW custom content (patch 1.17.2):</b>>br/>
+<b>Updated for TurtleWoW custom content (patch 1.17.2):</b><br/>
 - Flametongue and Windfury no longer have tick effects.
 - Added support for Totemic Recall
 
