@@ -4,7 +4,7 @@
 - Flametongue and Windfury no longer have tick effects.
 - Added support for Totemic Recall
 
-
+# Old Notes
 This is a modified version of TotemTimers, a World of Warcraft AddOn (1.12.1) which keeps track for a Shaman which Totem he 
 used and how long it'll last. With this modification it will also display when the next Tick of it comes. 
 For Example when the next Windfury Buff of your Windfury Totem will be applied or when your Tremor Totem has another chance 
