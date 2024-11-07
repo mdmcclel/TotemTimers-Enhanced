@@ -52,10 +52,10 @@ function TotemTimer_OnUpdate(arg1)
                     -- windfury update logic
                     wf_data = TTActiveTotems["Windfury"]
                     wf_data.duration = wf_data.duration - arg1;
-                    if wf_data.duration < (TotemData["Windfury"].duration - TotemData["Windfury"].tick) then
-                        getglobal(this:GetName().."Tick"):SetText("")
-                        return
-                    end
+                    --if wf_data.duration < (TotemData["Windfury"].duration - TotemData["Windfury"].tick) then
+                        --getglobal(this:GetName().."Tick"):SetText("")
+                        --return
+                    --end
                     
                     if wf_data.ticks and wf_data.ticks[1] then
                         if wf_data.ticks[1]<= wf_data.duration then
